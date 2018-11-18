@@ -21,12 +21,12 @@
         <ol>
             <todo-item v-for="todo in list" v-bind:todo="todo" v-bind:key="todo.id"></todo-item>
         </ol>
-        <button v-on:click="reverseList">Reverse Order</button>
         <hr />
-        <input v-model="hello">
-        <p>{{ hello }}</p>
+        <input v-model="newMessage" placeholder="new item">
+        <button v-on:click="addItem">Add New Item</button>
 
     </div>
+    <script src="components/todo-item.js"></script>
     <script src="main.js"></script>
 
 </body>

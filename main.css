@@ -4,3 +4,6 @@ body {
 li::first-letter {
     text-transform: capitalize;
 }
+li:nth-child(odd) {
+    background-color: #eeeeee;
+}

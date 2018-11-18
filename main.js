@@ -1,12 +1,4 @@
 
-  Vue.component('todo-item', {
-    // The todo-item component now accepts a
-    // "prop", which is like a custom attribute.
-    // This prop is called todo.
-    props: ['todo'],
-    template: '<li>{{ todo.message }}</li>'
-  });
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -18,18 +10,18 @@ var app = new Vue({
           { id: 3, message: "learn Elektron" },
           { id: 4, message: "build cross platform Folder Size app" },
       ],
-      hello: 'hello world'
+      newMessage: ''
     },
     methods: {
-        reverseList: function() {
+        addItem: function() {
 
-            let reversedList = [];
-            this.list.reverse().forEach(element => {
-                reversedList.push({
-                    message: element.message
-                });
-            });
-            this.list = reversedList;
+            console.log(this.newMessage)
+            this.list.push(
+                {
+                    id: this.list.length,
+                    message: this.newMessage
+                }
+            );
         }
     }
   });

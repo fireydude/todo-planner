@@ -15,13 +15,11 @@ var app = new Vue({
 
             let reversedList = [];
             console.log(this.list.length);
-            for(i = this.list.length-1; i >= 0; i = i-1)
-            {
-                console.log('list item: ', this.list[i]);
+            this.list.reverse().forEach(element => {
                 reversedList.push({
-                    message: this.list[i].message
+                    message: element.message
                 });
-            }
+            });
             this.list = reversedList;
             console.log(this.list.length);
         }

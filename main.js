@@ -8,7 +8,8 @@ var app = new Vue({
           { message: "build Folder size app with dotnet core backend" },
           { message: "learn Elektron" },
           { message: "build cross platform Folder Size app" },
-      ]
+      ],
+      hello: 'hello world'
     },
     methods: {
         reverseList: function() {

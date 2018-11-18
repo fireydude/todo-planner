@@ -23,15 +23,14 @@
             Hover your mouse over me for a few seconds
             to see my dynamically bound title!
         </span>
-        <ol>
-            <todo-item v-for="todo in list" v-bind:todo="todo" v-bind:key="todo.id"></todo-item>
-        </ol>
+        <todo-list v-bind:list="list"></todo-list>
         <hr />
         <input v-model="newMessage" placeholder="new item">
         <sui-button primary v-on:click="addItem">Add New Item</sui-button>
 
     </div>
     <script type="module" src="lib/components/todo-item.js"></script>
+    <script type="module" src="lib/components/todo-list.js"></script>
     <script type="module" src="lib/main.js"></script>
 
 </body>

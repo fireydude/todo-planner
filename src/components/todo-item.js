@@ -3,5 +3,5 @@ Vue.component('todo-item', {
     // "prop", which is like a custom attribute.
     // This prop is called todo.
     props: ['todo'],
-    template: '<li>{{ todo.message }}</li>'
+    template: '<li>{{ todo.message }}<todo-list v-bind:list="todo.child"></todo-list></li>'
   });

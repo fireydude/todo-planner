@@ -19,14 +19,13 @@
             to see my dynamically bound title!
         </span>
         <ol>
-            <li v-for="todo in list">
-                {{ todo.message }}
-            </li>
+            <todo-item v-for="todo in list" v-bind:todo="todo" v-bind:key="todo.id"></todo-item>
         </ol>
         <button v-on:click="reverseList">Reverse Order</button>
         <hr />
         <input v-model="hello">
         <p>{{ hello }}</p>
+
     </div>
     <script src="main.js"></script>
 

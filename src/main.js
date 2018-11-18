@@ -9,14 +9,14 @@ var app = new Vue({
                 id: 0, 
                 message: "learn Vue basics",
                 child: [
-                    { id: 0, message: "declarations" },
-                    { id: 1, message: "interactions" }
+                    { id: 0, message: "declarations", child: [] },
+                    { id: 1, message: "interactions", child: [] }
                 ]
             },
-            { id: 1, message: "learn Vue CLI" },
-            { id: 2, message: "build Folder size app with dotnet core backend" },
-            { id: 3, message: "learn Elektron" },
-            { id: 4, message: "build cross platform Folder Size app" },
+            { id: 1, message: "learn Vue CLI", child: [] },
+            { id: 2, message: "build Folder size app with dotnet core backend", child: [] },
+            { id: 3, message: "learn Elektron", child: [] },
+            { id: 4, message: "build cross platform Folder Size app", child: [] },
         ]
     }
 });

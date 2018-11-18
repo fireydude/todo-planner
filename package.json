@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "build": "npx babel src --out-dir lib",
+        "run": "http-server"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.1.5",
+        "@babel/core": "^7.1.6",
+        "@babel/preset-env": "^7.1.6",
+        "babel-cli": "^6.26.0"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0",
+        "semantic-ui-css": "^2.4.1"
+    }
+}

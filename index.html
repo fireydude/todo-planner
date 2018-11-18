@@ -7,8 +7,11 @@
     <title>Vue First</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.css" />
+
     <!-- development version, includes helpful console warnings -->
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
 </head>
 
 <body>
@@ -23,11 +26,11 @@
         </ol>
         <hr />
         <input v-model="newMessage" placeholder="new item">
-        <button v-on:click="addItem">Add New Item</button>
+        <sui-button primary v-on:click="addItem">Add New Item</sui-button>
 
     </div>
-    <script src="components/todo-item.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="lib/components/todo-item.js"></script>
+    <script type="module" src="lib/main.js"></script>
 
 </body>
 

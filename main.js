@@ -9,5 +9,21 @@ var app = new Vue({
           { message: "learn Elektron" },
           { message: "build cross platform Folder Size app" },
       ]
+    },
+    methods: {
+        reverseList: function() {
+
+            let reversedList = [];
+            console.log(this.list.length);
+            for(i = this.list.length-1; i >= 0; i = i-1)
+            {
+                console.log('list item: ', this.list[i]);
+                reversedList.push({
+                    message: this.list[i].message
+                });
+            }
+            this.list = reversedList;
+            console.log(this.list.length);
+        }
     }
   });

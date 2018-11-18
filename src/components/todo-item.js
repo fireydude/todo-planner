@@ -5,6 +5,7 @@ Vue.component('todo-item', {
   props: ['todo'],
   template: `<li>
         {{ todo.message }}
+        <todo-edit v-bind:todo="todo"></todo-edit>
         <input v-model="newMessage" placeholder="new item">
         <sui-button primary v-on:click="addItem">Add New Item</sui-button>
         <todo-list v-bind:list="todo.child"></todo-list>

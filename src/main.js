@@ -6,7 +6,8 @@ var app = new Vue({
         message: 'You loaded this page on ' + new Date().toLocaleString(),
         list: [
             {
-                id: 0, message: "learn Vue basics",
+                id: 0, 
+                message: "learn Vue basics",
                 child: [
                     { id: 0, message: "declarations" },
                     { id: 1, message: "interactions" }
@@ -16,19 +17,6 @@ var app = new Vue({
             { id: 2, message: "build Folder size app with dotnet core backend" },
             { id: 3, message: "learn Elektron" },
             { id: 4, message: "build cross platform Folder Size app" },
-        ],
-        newMessage: ''
-    },
-    methods: {
-        addItem: function () {
-
-            console.log(this.newMessage)
-            this.list.push(
-                {
-                    id: this.list.length,
-                    message: this.newMessage
-                }
-            );
-        }
+        ]
     }
 });

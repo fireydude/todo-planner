@@ -33,11 +33,12 @@
         </sui-grid>
         <hr />
         <sui-button>Save to JSON</sui-button>
-        <sui-button primary>Save to JIRA CSV</sui-button>
+        <sui-button primary v-on:click="save">Save to JIRA CSV</sui-button>
     </sui-container>
     <script type="module" src="lib/components/todo-item.js"></script>
     <script type="module" src="lib/components/todo-edit.js"></script>
     <script type="module" src="lib/components/todo-list.js"></script>
+    <script type="module" src="lib/utils/saveJSON.js"></script>
     <script type="module" src="lib/main.js"></script>
 
 </body>

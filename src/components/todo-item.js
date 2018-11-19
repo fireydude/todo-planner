@@ -2,7 +2,7 @@ Vue.component('todo-item', {
   // The todo-item component now accepts a
   // "prop", which is like a custom attribute.
   // This prop is called todo.
-  props: ['todo'],
+  props: ['todo', 'remove'],
   template: `<li>
         <span v-if="!isEditting">{{ todo.message }}</span>
         <todo-edit v-bind:todo="todo" v-if="isEditting"></todo-edit>
@@ -62,7 +62,8 @@ Vue.component('todo-item', {
       this.cancel();
     },
     removeItem: function() {
-      console.log('callback to parent, remove ' + this.todo.key);
+      console.log('callback to parent, remove ' + this.todo.message);
+      this.remove(this.todo);
       this.cancel();
     },
     cancel: function() {

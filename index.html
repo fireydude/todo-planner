@@ -17,16 +17,24 @@
 </head>
 
 <body>
-    <h1>Vue First</h1>
-    <div id="app">
-        <span v-bind:title="message">
-            Hover your mouse over me for a few seconds
-            to see my dynamically bound title!
-        </span>
-        <todo-list v-bind:list="list"></todo-list>
+    <sui-container id="app">
+        <h1 is="sui-header">Project Planner
+            <sui-header-subheader>Export ToDo lists to JSON or CSV for JIRA</sui-header-subheader>
+        </h1>
+        <sui-grid :columns="3">
+            <sui-grid-column class="four wide">
+                <h2 is="sui-header">
+                    Editor
+                </h2>
+            </sui-grid-column>
+            <sui-grid-column class="twelve wide">
+                <todo-list v-bind:list="list"></todo-list>
+            </sui-grid-column>
+        </sui-grid>
         <hr />
-
-    </div>
+        <sui-button>Save to JSON</sui-button>
+        <sui-button primary>Save to JIRA CSV</sui-button>
+    </sui-container>
     <script type="module" src="lib/components/todo-item.js"></script>
     <script type="module" src="lib/components/todo-edit.js"></script>
     <script type="module" src="lib/components/todo-list.js"></script>
